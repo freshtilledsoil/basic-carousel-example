@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'FortySecondStreetHBRegular';
+    src: url('../fonts/FORTSSH_-webfont.eot');
+    src: url('../fonts/FORTSSH_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FORTSSH_-webfont.woff') format('woff'),
+         url('../fonts/FORTSSH_-webfont.ttf') format('truetype'),
+         url('../fonts/FORTSSH_-webfont.svg#FortySecondStreetHBRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background: url(../img/bg.png) repeat;
+  font: 1em 'Helvetica Neue', helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #f2560e;
+  font-family: 'FortySecondStreetHBRegular';
+  font-size: 3em;
+  font-weight: normal;
+  text-align: center;
+}
+
+img {
+  border: 8px solid #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+}
+
+#carousel {
+  height: 530px;
+  overflow: hidden;
+  
+  li {
+    opacity: 0;
+    
+    &.active {
+      opacity: 1;
+      transition: opacity 1.3s ease-in;
+      -moz-transition: opacity 1.3s ease-in;
+      -webkit-transition: opacity 1.3s ease-in;
+    }
+    
+    img {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+    }
+  }
+}
+
+#controls {
+  margin: 5% auto;
+  width: 340px;
+  
+  li, a {
+    display: inline-block;
+  }
+  
+  a {
+    background: lighten(#f2560e, 10%);
+    border: 1px solid #f2560e;
+    box-shadow: 1px 1px 3px darken(#f2560e, 20%);
+    color: #fff;
+    margin-right: 10px;
+    padding: 3px 10px 5px;
+    text-shadow: 1px 1px 1px #f2560e;
+    
+    &:hover, &:active {
+      background: lighten(#f2560e, 25%);
+      border: 1px solid lighten(#f2560e, 10%);
+      color: darken(#f2560e, 10%);
+      text-shadow: none;
+    }
+  }
+}
